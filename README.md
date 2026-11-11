@@ -2,7 +2,7 @@
 
 # Alejandro Camerlengo
 
-**Data & AI Engineer · Quantitative Finance & Distributed Data Systems**
+**Data Engineer**
 
 [![Personal Observatory](https://img.shields.io/badge/Observatory-alejandrocamerlengo.com-10b981?style=flat-square&logo=googlechrome&logoColor=white)](https://alejandrocamerlengo.com)
 [![QuantLambda Platform](https://img.shields.io/badge/Flagship_Platform-quantlambda.dev-38bdf8?style=flat-square&logo=googlecloud&logoColor=white)](https://quantlambda.dev)
@@ -16,7 +16,7 @@
 
 ### Overview
 
-Data & AI Engineer with an academic and professional foundation in **Quantitative Finance, Capital Markets, and Econometrics** (M.Sc. in Finance, Postgraduate Specialization in Data Science, B.Sc. in Economics & Administration).
+Data Engineer with an academic and professional foundation in **Quantitative Finance, Capital Markets, and Econometrics** (M.Sc. in Finance, Postgraduate Specialization in Data Science, B.Sc. in Economics & Administration).
 
 I design and operate end-to-end production systems spanning **distributed data engineering** (Apache Spark, Kafka, Airflow, dbt, BigQuery), **quantitative portfolio & risk modeling** (CVaR, Hierarchical Risk Parity, Black-Litterman, regime detection), and **multi-agent AI architectures** with deterministic guardrails.
 
