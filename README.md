@@ -26,24 +26,24 @@ I design and operate end-to-end production systems spanning **distributed data e
 
 Every system and research observatory below is deployed in production on Google Cloud Run and updated via automated pipelines:
 
-| Platform / Observatory | Live URL | Architecture & Scope |
-| :--- | :--- | :--- |
-| **Personal Engineering Hub** | [**`alejandrocamerlengo.com`**](https://alejandrocamerlengo.com) | 100% keyboard-navigable AI CLI terminal, interactive project hub, empirical macro research, and dual-axis career DAG (`2011–2026`) across 56 languages. |
-| **QuantLambda** *(Flagship)* | [**`quantlambda.dev`**](https://quantlambda.dev) | End-to-end quantitative market intelligence, cross-asset regime telemetry, portfolio optimization (`HRP` / `CVaR`), and a 6-agent investment committee across 13 GCP microservices. |
-| **Macroeconomics & Labor Research** | [**`macro.alejandrocamerlengo.com`**](https://macro.alejandrocamerlengo.com) | Automated monthly pipeline ingesting 7 official Argentine statistical sources (`1961–Present`) with deterministic structural analysis and SARIMAX forecasting. |
-| **Spark Learning & Decision Graph** | [**`spark.alejandrocamerlengo.com`**](https://spark.alejandrocamerlengo.com) | Interactive visual guide to Apache Spark 3.5 distributed execution, shuffle/skew bottlenecks, and 30 engineering reference guides. |
-| **Global Quality of Life Explorer** | [**`explorer.alejandrocamerlengo.com`**](https://explorer.alejandrocamerlengo.com) | Historical cross-country observatory comparing 44 socioeconomic, health, education, and purchasing-power indicators across 240 nations. |
-| **Geospatial World Map** | [**`worldmap.alejandrocamerlengo.com`**](https://worldmap.alejandrocamerlengo.com) | Interactive cartographic engine with live continental telemetry and custom vector map styling. |
+| Platform / Observatory | Live URL | Source Repository | Architecture & Scope |
+| :--- | :--- | :--- | :--- |
+| **Personal Engineering Hub** | [**`alejandrocamerlengo.com`**](https://alejandrocamerlengo.com) | [`personal_website`](https://github.com/ale-camer/personal_website) | 100% keyboard-navigable AI CLI terminal, interactive project hub, empirical macro research, and dual-axis career DAG (`2011–2026`) across 56 languages. |
+| **QuantLambda** *(Flagship)* | [**`quantlambda.dev`**](https://quantlambda.dev) | [`market-intelligence-dashboard`](https://github.com/ale-camer/market-intelligence-dashboard) | End-to-end quantitative market intelligence, cross-asset regime telemetry, portfolio optimization (`HRP` / `CVaR`), and a 6-agent investment committee across 13 GCP microservices. |
+| **Macroeconomics & Labor Research** | [**`macro.alejandrocamerlengo.com`**](https://macro.alejandrocamerlengo.com) | [`argentina-macro-pipeline`](https://github.com/ale-camer/argentina-macro-pipeline) | Automated monthly pipeline ingesting 7 official Argentine statistical sources (`1961–Present`) with deterministic structural analysis and SARIMAX forecasting. |
+| **Spark Learning & Decision Graph** | [**`spark.alejandrocamerlengo.com`**](https://spark.alejandrocamerlengo.com) | [`spark-encyclopedia-pro`](https://github.com/ale-camer/spark-encyclopedia-pro) | Interactive visual guide to Apache Spark 3.5 distributed execution, shuffle/skew bottlenecks, and 30 engineering reference guides. |
+| **Global Quality of Life Explorer** | [**`explorer.alejandrocamerlengo.com`**](https://explorer.alejandrocamerlengo.com) | [`global-qol-explorer`](https://github.com/ale-camer/global-qol-explorer) | Historical cross-country observatory comparing 44 socioeconomic, health, education, and purchasing-power indicators across 240 nations. |
+| **Geospatial World Map** | [**`worldmap.alejandrocamerlengo.com`**](https://worldmap.alejandrocamerlengo.com) | [`geospacial_projects`](https://github.com/ale-camer/geospacial_projects) | Interactive cartographic engine with live continental telemetry and custom vector map styling. |
 
 ---
 
-### Repository Architecture Index
+### Repository Architecture Index — QuantLambda (`P-01` – `P-11`)
 
-#### 1. QuantLambda — Quantitative & Agentic Market Intelligence (`P-01` – `P-11`)
-Live at [**`quantlambda.dev`**](https://quantlambda.dev) · Infrastructure orchestrated via [**`portfolio-infra`**](https://github.com/ale-camer/portfolio-infra) (Terraform IaC & GitHub Actions CI/CD).
+Live at [**`quantlambda.dev`**](https://quantlambda.dev) · Frontend UI in [**`market-intelligence-dashboard`**](https://github.com/ale-camer/market-intelligence-dashboard) · Infrastructure orchestrated via [**`portfolio-infra`**](https://github.com/ale-camer/portfolio-infra) (Terraform IaC & GitHub Actions CI/CD).
 
 | Module | Repository | Engineering Layer & Core Stack |
 | :--- | :--- | :--- |
+| **`UI`** | [**`market-intelligence-dashboard`**](https://github.com/ale-camer/market-intelligence-dashboard) | Unified quantitative terminal, portfolio lab & multi-agent workspace · *React 19, Vite 8, Cloud Run* |
 | **`P-01`** | [**`financial-markets-pipeline`**](https://github.com/ale-camer/financial-markets-pipeline) | Daily OHLCV & macro batch ingestion · *Airflow, PostgreSQL, Pydantic, GCS* |
 | **`P-02`** | [**`crypto-analytics-platform`**](https://github.com/ale-camer/crypto-analytics-platform) | High-throughput crypto analytics lakehouse · *Polars, BigQuery, Airflow, Terraform* |
 | **`P-03`** | [**`real-time-market-events`**](https://github.com/ale-camer/real-time-market-events) | Low-latency streaming event processor · *Kafka, Faust, TimescaleDB, FastAPI* |
@@ -56,14 +56,6 @@ Live at [**`quantlambda.dev`**](https://quantlambda.dev) · Infrastructure orche
 | **`P-10`** | [**`autonomous-trading-analyst`**](https://github.com/ale-camer/autonomous-trading-analyst) | ReAct trading analyst with deterministic risk guardrails & episodic memory · *Python, FastAPI* |
 | **`P-11`** | [**`multi-agent-market-intelligence`**](https://github.com/ale-camer/multi-agent-market-intelligence) | Multi-agent investment committee orchestrator with consensus & risk veto · *FastAPI, Cloud Run* |
 | **`IaC`** | [**`portfolio-infra`**](https://github.com/ale-camer/portfolio-infra) | Centralized GCP Terraform infrastructure, serverless scheduling & health keepalives |
-
-#### 2. Empirical Research & Interactive Applications
-
-| Repository | Live Deployment | Description |
-| :--- | :--- | :--- |
-| [**`argentina-macro-pipeline`**](https://github.com/ale-camer/argentina-macro-pipeline) | [`macro.alejandrocamerlengo.com`](https://macro.alejandrocamerlengo.com) | Deterministic macroeconomic ETL, 7-source reconciliation (INDEC, BCRA, SIPA, EPH, Willis Towers Watson, World Bank, IMF), and SARIMAX forecasting (`1961–Present`). |
-| [**`spark-encyclopedia-pro`**](https://github.com/ale-camer/spark-encyclopedia-pro) | [`spark.alejandrocamerlengo.com`](https://spark.alejandrocamerlengo.com) | Interactive Apache Spark 3.5 architectural decision graph and optimization reference. |
-| [**`personal_website`**](https://github.com/ale-camer/personal_website) | [`alejandrocamerlengo.com`](https://alejandrocamerlengo.com) | React 19 + Vite 8 engineering hub with 100% keyboard CLI navigation, interactive SVG macro charts, and 56-language localization. |
 
 ---
 
